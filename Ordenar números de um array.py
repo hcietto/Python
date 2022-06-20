@@ -44,7 +44,5 @@ def quicksort(array):
 
     #retorna os arrays como um só
     return (quicksort(menores) + [pivo] + quicksort(maiores))
-
-
-aux = ("Digite aqui o array para ser organizado de forma crescente")
-print(quicksort(aux))
+  
+print(quicksort("Digite aqui o array para ser organizado de forma crescente"))
