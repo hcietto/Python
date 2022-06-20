@@ -21,3 +21,30 @@ def ordPorSel(array):
 aux = ordPorSel("Digite aqui o array para ordenar de forma crescente")
 
 print (aux)
+
+#-------------------------------
+#Ou com quicksort
+#-------------------------------
+
+def quicksort(array):
+
+  #arrays com menos de 2 elementos sempre estão organizados
+  if len(array) < 2:
+    return array
+
+  else:
+    #a base para organizar será o índice 0
+    pivo = array[0]
+
+    #elementos menores ou iguais ao pivo serão movidos para o array "menores"
+    menores = [i for i in array[1:] if i <= pivo]
+
+    #e os maiores para o "maiores"
+    maiores = [i for i in array[1:] if i > pivo]
+
+    #retorna os arrays como um só
+    return (quicksort(menores) + [pivo] + quicksort(maiores))
+
+
+aux = ("Digite aqui o array para ser organizado de forma crescente")
+print(quicksort(aux))
