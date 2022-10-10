@@ -1,2 +1,1 @@
 # Python
-Random Python codes
